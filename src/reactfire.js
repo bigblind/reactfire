@@ -12,14 +12,7 @@
   'use strict';
 
   /* istanbul ignore next */
-  if (typeof define === 'function' && define.amd) {
-    // AMD
-    define(['/react'], function(React) {
-      // I'm not sure what react's path should be here. Is there a way we can let
-      // users specify it?
-      return (root.ReactFireMixin = factory(React));
-    });
-  } else if (typeof exports === 'object') {
+  if (typeof exports === 'object') {
     // CommonJS
     var React = require('react');
     module.exports = factory(React);
